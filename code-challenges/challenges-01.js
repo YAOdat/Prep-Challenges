@@ -13,19 +13,26 @@
 const findMax = (arr) => {
   let max;
   // write your code here
+  let pointer= arr[0]
   for(let i=0; i<arr.length; i++){
-    for(let p=i+1; p<arr.length; p++){
-      if(i>k){
-        max= arr[i];
+    for(let p=i+1; p<arr.length+1; p++){
+      if(arr[i]>pointer){
+        pointer= arr[i];
       }
-     else if(k>i){
-      max= arr[k];
-     }
-    }
+    
   }
-
-  return max;
+}
+  return pointer;
 };
+
+
+arr = [12, 32, 22, 45, 78, 12, 50];
+console.log(findMax(arr))
+
+
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -38,16 +45,23 @@ const findMax = (arr) => {
 // Input: [20, '234', 'car', 41, 20, 'chair']
 // Output: 81
 const sumNums = (arr) => {
-  let sum;
+  let sum=0;
   // write your code here
-  if (typeof arr[i] == "number")
-  for (let i = 0; i < array.length; i++) {
-    if (typeof arr[i] == "number"){
-
-    sum += arr[i];
+  
+      for (let i = 0; i < arr.length; i++) {
+          if (typeof arr[i] == "number")
+         {
+          sum += arr[i];
+        }
   }
+
  
-} return sum;};
+return sum;
+};
+
+arr=[20, '234', 'car', 41, 20, 'chair']
+console.log(sumNums(arr))
+
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { findMax, sumNums };
