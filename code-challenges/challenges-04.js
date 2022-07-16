@@ -40,7 +40,17 @@ const runningSumOfArray = (arr) => {
 // Output: nums = [0,1,3,0,4,_,_,_]
 const removeElementFromArray = (arr, value) => {
   // write your code here
-  return arr;
+  let newArr=[];
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] == val) {
+      nums[j]='_';
+      newArr.push(nums[j])
+      
+    } else{newArr.push(nums[j])
+    }
+  }
+  return newArr;
+}
 };
 // -------------------------------------------------------------------------------------------------------
 
