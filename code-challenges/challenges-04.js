@@ -46,8 +46,7 @@ const removeElementFromArray = (arr, value) => {
       nums[j]='_';
       newArr.push(nums[j])
       
-    } else{
-      newArr.push(nums[j])
+    } else{newArr.push(nums[j])
     }
   }
   return newArr;
